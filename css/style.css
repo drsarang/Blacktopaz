@@ -1722,9 +1722,9 @@ body:after {
   font-size: 1.2rem; }
 
 .team-member .position {
-  color: #cccccc;
+  color: #F39200;
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: .85rem;
   letter-spacing: .05rem; }
 
 .team-member:hover .social {
