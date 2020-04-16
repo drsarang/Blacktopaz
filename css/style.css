@@ -7,7 +7,11 @@ body {
     line-height: 1.7;
     color: gray;
     font-family: lato;
-    /*    font-family: Futura lt BT;*/
+    /*    font-family: roboto;*/
+
+    /*    font-family: josefin sans;*/
+
+    /*        font-family: Futura lt BT;*/
     font-weight: 400;
     font-size: 1rem;
 }
@@ -34,6 +38,25 @@ body {
     font-weight: 1.2em;
     font-size: 1em;
 }
+
+.ht {
+    height: 300px
+}
+
+.know-more {
+    font-family: Alex brush;
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -67,14 +90,15 @@ h5,
 .h3,
 .h4,
 .h5 {
-    /*
- 
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-*/
-    font-family: Georgia;
-}
 
-/*font-family:Constantia ; }*/
+
+    /*    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }*/
+
+    /*    font-family: Georgia;*/
+    /*}*/
+
+    font-family: Constantia;
+}
 
 .border-2 {
     border-width: 2px;
@@ -904,19 +928,19 @@ body:after {
 }
 
 .site-blocks-cover h1 {
-    font-size: 3rem;
+    font-size: 5rem;
 
     /*    -------------WELCOME TEXT LANDING PAGE ------------*/
 
     text-transform: capitalize !important;
-    /*      font-family: darkline;*/
-    /*      font-family: dark roast;*/
-    /*      font-family: Carolissa;*/
-    /*      font-family: Broadcast Matter;*/
-    /*      font-family:Rushtick Regural;*/
+    /*          font-family: darkline;*/
+    /*          font-family: dark roast;*/
+    font-family: Carolissa;
+    /*          font-family: Broadcast Matter;*/
+    /*          font-family:Rushtick Regural;*/
     /*    font-weight: 400;*/
-    /*    color: #F39200;*/
-    color: #fff;
+    color: #F39200;
+    /*    color: #fff;*/
     /*    font-weight: 900; */
 }
 
