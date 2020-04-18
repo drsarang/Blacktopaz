@@ -39,15 +39,45 @@ body {
     font-size: 1em;
 }
 
-.ht {
+.ht-3 {
     height: 300px
 }
+
+.ht-35 {
+    height: 350px
+}
+
+.ht-4 {
+    height: 400px
+}
+
+.ht-5 {
+    height: 500px
+}
+
+
 
 .know-more {
     font-family: Alex brush;
     font-size: 1.8em;
     font-weight: 300;
 }
+.bg-orange{
+    color: #ffffff;
+    background: orange !important; 
+}
+
+.border-bottom{
+    border-bottom-right-radius: 10px; 
+    border-bottom-left-radius: 10px;
+}
+
+.border-top{
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+}
+
+
 
 
 
