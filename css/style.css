@@ -33,10 +33,12 @@ body {
     color: #F39200;
 }
 
+
 .btlogo {
     font-family: made canvas !important;
-    font-weight: 1.2em;
-    font-size: 1em;
+    font-size: 1.3em;
+    font-weight:bold;
+    letter-spacing: 2px;
 }
 
 .ht-3 {
@@ -499,7 +501,7 @@ body:after {
 .site-navbar .site-logo {
     position: relative;
     left: 0;
-    top: -5px;
+/*    top: -5px;*/
 }
 
 .site-navbar .site-navigation .site-menu {
@@ -877,6 +879,7 @@ body:after {
 
 .sticky-wrapper .site-navbar .site-logo a {
     color: #fff;
+
 }
 
 .sticky-wrapper .site-navbar .site-menu > li > a {
