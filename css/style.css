@@ -23,7 +23,7 @@ body {
 
 ::selection {
     background: #000;
-    color: #fff;
+    color: #000000;
 }
 
 
@@ -37,7 +37,7 @@ body {
 .btlogo {
     font-family: made canvas !important;
     font-size: 1.3em;
-    font-weight:bold;
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
@@ -53,6 +53,11 @@ body {
     height: 400px
 }
 
+.ht-45 {
+    height: 450px
+}
+
+
 .ht-5 {
     height: 500px
 }
@@ -64,27 +69,50 @@ body {
     font-size: 1.8em;
     font-weight: 300;
 }
-.bg-orange{
+
+.bg-orange {
     color: #ffffff;
-    background: orange !important; 
+    background: orange !important;
 }
 
-.border-bottom{
-    border-bottom-right-radius: 10px; 
+.border-bottom {
+    border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-.border-top{
-    border-top-left-radius: 10px; 
+.border-top {
+    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.footlogo{
-    
+.footlogo {
+
     width: 80px;
     padding: 0px;
     margin-top: -30px;
 }
+
+.img-ht {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-position: center;
+
+}
+
+.subtext {
+    font-family: ink free;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -495,7 +523,7 @@ body:after {
 .site-navbar .site-logo {
     position: relative;
     left: 0;
-/*    top: -5px;*/
+    /*    top: -5px;*/
 }
 
 .site-navbar .site-navigation .site-menu {
