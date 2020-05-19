@@ -1726,6 +1726,7 @@ body:after {
 
 .h-entry img {
     margin-bottom: 30px;
+/*    width: 300px*/
 }
 
 .h-entry .meta {
