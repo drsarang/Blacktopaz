@@ -104,7 +104,20 @@ body {
     font-family: ink free;
     font-weight: bolder;
 }
-
+.bg-cover{
+    height: 40vh;
+}
+.seek-title{
+    font-family:felix titling; 
+    font-size: 4em;
+}
+.seek-sm-title{
+    font-family:felix titling; 
+    font-size: 2em;
+}
+.legal p{
+    text-align: justify;
+}
 
 
 
