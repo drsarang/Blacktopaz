@@ -85,6 +85,13 @@ body {
     border-top-right-radius: 10px;
 }
 
+.border{
+    border-radius: 10px;
+}
+
+
+
+
 .footlogo {
 
     width: 80px;
