@@ -85,7 +85,7 @@ body {
     border-top-right-radius: 10px;
 }
 
-.border{
+.border-r{
     border-radius: 10px;
 }
 
@@ -112,7 +112,8 @@ body {
     font-weight: bolder;
 }
 .bg-cover{
-    height: 40vh;
+    height: 55vh !important;
+    background-size: cover;
 }
 .seek-title{
     font-family:felix titling; 
