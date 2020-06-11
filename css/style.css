@@ -53,6 +53,13 @@ body {
     height: 350px
 }
 
+.ht-32 {
+    height: 320px
+}
+
+.ht-33 {
+    height: 330px
+}
 .ht-4 {
     height: 400px
 }
@@ -73,8 +80,7 @@ body {
 }
 
 .bg-orange {
-    color: #ffffff;
-    background: orange !important;
+    background: #ffa722 !important;
 }
 
 .border-bottom {
