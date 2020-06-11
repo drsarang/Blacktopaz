@@ -111,6 +111,12 @@ body {
     font-weight: bolder;
 }
 
+.subtext-lg {
+    font-family: ink free;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
 .bg-cover {
     height: 55vh !important;
     background-size: cover;
