@@ -60,6 +60,7 @@ body {
 .ht-33 {
     height: 330px
 }
+
 .ht-4 {
     height: 400px
 }
@@ -147,9 +148,18 @@ body {
     text-align: justify;
 }
 
-    
+.logo {
+    padding: 9px !important;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .5s ease-in-out;
+}
 
-
+.logo:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.2);
+}
 
 
 
