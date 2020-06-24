@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bt.</title>
+    
+    
+    <link href="cdn.bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!--    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--    <script type="text/javascript" src="bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="jquery.validate.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="cdn.bootstrap.min.js"></script>
+    <script src="backend.js"></script>
+
+    <link rel="stylesheet" href="homeloan.css">
+    <script src="jquery.formtowizard.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            var $HomeLoan = $('#HomeLoan');
+            $HomeLoan.validate({
+                errorElement: 'em'
+            });
+            $HomeLoan.formToWizard({
+                submitButton: 'SaveAccount',
+                nextBtnClass: 'btn btn-primary next',
+                prevBtnClass: 'btn btn-default prev',
+                buttonTag: 'button',
+                validateBeforeNext: function(form, step) {
+                    var stepIsValid = true;
+                    var validator = form.validate();
+                    $(':input', step).each(function(index) {
+                        var xy = validator.element(this);
+                        stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+                    });
+                    return stepIsValid;
+                },
+                progress: function(i, count) {
+                    $('#progress-complete').width('' + (i / count * 100) + '%');
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body style="font-family: 'Montserrat Light', sans-serif;">
+    <div class="jumbotron text-center">
+        <h2 style="color:White;">Home Loans Calculators</h2>
+    </div>
+
+    <div class="container">
+        <ul id="tabs" class="nav nav-pills nav-stacked col-md-2">
+            <li class="active"><a href="#tab_a" data-toggle="pill">Loan Eligibility <br><span style="font-size:10px;">How much loan you are eligible for?</span></a></li>
+            <li><a href="#tab_b" data-toggle="pill">EMI <br><span style="font-size:10px;">How much EMI you have to pay?</span></a></li>
+<!--            <li><a href="#tab_c" data-toggle="pill">Apply Loan</a></li>-->
+        </ul>
+        <div class="tab-content col-md-10">
+            <div class="tab-pane active" id="tab_a">
+                <script language="javascript" type="text/javascript">
+                    function eligiable() {
+                        var P1 = document.formval2.pr_amt2.value; // pick the form input value..
+                        var rate1 = document.formval2.int_rate2.value; // pick the form input value..
+                        var n1 = document.formval2.period2.value; // pick the form input value..
+                        var r1 = rate1 / (12 * 100); // to calculate rate percentage..
+                        var prate1 = (P1 * r1 * Math.pow((1 + r1), n1 * 12)) / (Math.pow((1 + r1), n1 * 12) - 1); // to calculate compound interest..
+                        var emi1 = Math.ceil(prate1 * 100) / 100; // to parse emi amount..
+                        var existing = document.formval2.ExLoan.value;
+                        var existingLoan = (existing - (existing * 60 / 100));
+                        var income1 = document.formval2.NetIncome.value;
+                        if (income1 <= 14999) {
+                            var incomere = ((income1) * 40 / 100) - existingLoan;
+                        } else if (income1 <= 29999) {
+                            var incomere = ((income1) * 45 / 100) - existingLoan;
+                        } else if (income1 >= 30000) {
+                            var incomere = ((income1) * 50 / 100) - existingLoan;
+                        }
+                        var incomereq = Math.floor(incomere / emi1 * P1);
+                        var prate2 = (incomereq * r1 * Math.pow((1 + r1), n1 * 12)) / (Math.pow((1 + r1), n1 * 12) - 1); // to calculate compound interest2..
+                        var emi2 = Math.ceil((prate2) * 100) / 100; // to parse emi2 amount..   //Check again Reminder
+                        // to assign value in field1 as fixed upto two decimal..
+                        if (incomereq > P1) {
+                            document.formval3.field13.value = ("You are Eligible for this loan ");
+                            document.formval3.field11.value = (("₹ " + P1 + " at EMI " + "₹ " + emi1.toFixed(0)));
+                            document.formval3.field12.value = ("You are Eligible for a maximum loan of " + ("₹ " + incomereq + " at EMI " + "₹ " + emi2.toFixed(0)));
+                        } else {
+                            document.formval3.field13.value = ("You are not Eligible for this loan");
+                            document.formval3.field11.value = ("");
+                            document.formval3.field12.value = ("You are Eligible for a maximum loan of " + ("₹ " + incomereq + " at EMI " + "₹ " + emi2.toFixed(0)));
+                        }
+
+                        //to assign value in field2.. 
+                    }
+
+                </script>
+                <form name="formval2" class="form-horizontal col-md-8" style="font-size:12px;">
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Home Loan Required:</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" class="form-control input-sm" id="input" name="pr_amt2" placeholder="Enter Loan Amount">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Net income per month</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" class="form-control input-sm" id="input" name="NetIncome" placeholder="Excluding LTA and Medical allowances">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Existing loan commitments</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="number" class="form-control input-sm" id="input" Name="ExLoan" placeholder="(per month)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Loan Tenure</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control input-sm" id="input" name="period2" placeholder="(in years)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Rate of Interest</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input type="number" class="form-control input-sm" id="input" disabled value="9.5" name="int_rate2">
+                                <span class="input-group-addon">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-12">
+                            <button type="button" class="btn btn-primary" onclick="eligiable()">Check Eligibility</button>
+                            <button type="reset" class="btn btn-link">Reset All</button>
+                        </div>
+                    </div>
+                </form>
+                <form name="formval3" class="form-horizontal col-md-4" style="font-size:12px;">
+                    <div class="form-group">
+                        <output class="col-sm-12" name="field13" style="font-size:20px; font-weight:bold; font-family:Roboto;"></output>
+                        <output class="col-sm-12" name="field11" style="font-size:15px; font-family:Roboto;"></output>
+                    </div>
+                    <div class="form-group">
+                        <output class="col-sm-12" name="field12" style="font-size:17px; font-family:Roboto"></output>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane" id="tab_b">
+                <script language="javascript" type="text/javascript">
+                    function emi() {
+                        var P = document.formval.pr_amt.value; // pick the form input value..
+                        var rate = document.formval.int_rate.value; // pick the form input value..
+                        var n = document.formval.period.value; // pick the form input value..
+                        var r = rate / (12 * 100); // to calculate rate percentage..
+                        var prate = (P * r * Math.pow((1 + r), n * 12)) / (Math.pow((1 + r), n * 12) - 1); // to calculate compound interest..
+                        var emi = Math.ceil(prate * 100) / 100; // to parse emi amount..
+                        // to assign value in field1 as fixed upto two decimal..				
+                        document.formval4.field1.value = ("Monthly EMI: " + "₹ " + emi.toFixed(0));
+                    }
+
+                </script>
+                <form name="formval" class="form-horizontal col-md-8" style="font-size:12px;">
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Loan Amount</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <span class="input-group-addon">₹</span>
+                                <input type="text" class="form-control input-sm" id="idLoanAmount" name="pr_amt" placeholder="Enter Loan Amount">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Loan Tenure</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control input-sm" id="idLoanTenure" placeholder="(in years)" name="period">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input" class="col-sm-4 control-label">Rate of Interest</label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" id="idROI" name="int_rate">
+                                <span class="input-group-addon">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-12">
+                            <button type="button" name="calculate" value="Calculate" onclick="emi()" class="btn btn-primary">Calculate EMI</button>
+                            <button type="reset" class="btn btn-link">Reset All</button>
+                        </div>
+                    </div>
+
+                </form>
+                <form name="formval4" class="form-horizontal col-md-4" style="font-size:12px;">
+                    <div class="form-group">
+                        <output class="col-sm-12" name="field1" style="font-size:20px; font-weight:bold; font-family:Roboto;"></output>
+                    </div>
+                           
+                </form>
+            </div>
+       
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
