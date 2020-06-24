@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bt.</title>
-    
-    
+
+
     <link href="cdn.bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<!--    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--    <script type="text/javascript" src="bootstrap.min.js"></script>-->
+    <!--    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+    <!--    <script type="text/javascript" src="bootstrap.min.js"></script>-->
+
+    <link rel="stylesheet" href="../css/style.css">
+
+
+
+
     <script type="text/javascript" src="jquery.validate.min.js"></script>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="cdn.bootstrap.min.js"></script>
@@ -51,13 +57,17 @@
 <body style="font-family: 'Montserrat Light', sans-serif;">
     <div class="jumbotron text-center">
         <h2 style="color:White;">Home Loans Calculators</h2>
+
     </div>
 
     <div class="container">
         <ul id="tabs" class="nav nav-pills nav-stacked col-md-2">
-            <li class="active"><a href="#tab_a" data-toggle="pill">Loan Eligibility <br><span style="font-size:10px;">How much loan you are eligible for?</span></a></li>
-            <li><a href="#tab_b" data-toggle="pill">EMI <br><span style="font-size:10px;">How much EMI you have to pay?</span></a></li>
-<!--            <li><a href="#tab_c" data-toggle="pill">Apply Loan</a></li>-->
+            <li class="active"><a href="#tab_a" data-toggle="pill"> <h4>Loan Eligibility</h4><span style="font-size:12px;">How much loan you are eligible for?</span></a></li>
+            <li><a href="#tab_b" data-toggle="pill"> <h4>EMI</h4><span style="font-size:12px;">How much EMI you have to pay?</span></a></li>
+            <br>
+            <a href="../services.html"> <button type="button" class="btn btn-primary">Back to Services</button> </a>
+            <!--            <li><a href="#tab_b" data-toggle="pill">Back to Homepage </a></li>-->
+            <!--            <li><a href="#tab_c" data-toggle="pill">Apply Loan</a></li>-->
         </ul>
         <div class="tab-content col-md-10">
             <div class="tab-pane active" id="tab_a">
@@ -142,6 +152,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-12">
+
                             <button type="button" class="btn btn-primary" onclick="eligiable()">Check Eligibility</button>
                             <button type="reset" class="btn btn-link">Reset All</button>
                         </div>
@@ -211,10 +222,9 @@
                            
                 </form>
             </div>
-       
+
         </div>
     </div>
-
 
 
 </body>
