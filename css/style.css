@@ -7,11 +7,6 @@ body {
     line-height: 1.7;
     color: gray;
     font-family: lato;
-    /*    font-family: roboto;*/
-
-    /*    font-family: josefin sans;*/
-
-    /*        font-family: Futura lt BT;*/
     font-weight: 400;
     font-size: 1rem;
 }
@@ -72,12 +67,6 @@ body {
 
 .ht-5 {
     height: 500px
-}
-
-.know-more {
-    font-family: Alex brush;
-    font-size: 1.8em;
-    font-weight: 300;
 }
 
 .bg-orange {
