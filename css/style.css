@@ -3,11 +3,16 @@ html {
     overflow-x: hidden;
 }
 
+@font-face {
+   font-family: mylato;
+   src: url(fonts/Lato-Regular.ttf);
+}
+
 
 body {
     line-height: 1.7;
     color: gray;
-    font-family: lato;
+    font-family: mylato;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -17,31 +22,6 @@ body {
     src: url(../fonts/ProximaNova-Regular.otf);
 }
 
-
-
-@font-face {
-    src :url(fonts/Lato-Regular.ttf);
-    font-family : 'lato';
-    font-style : normal;
-}
-
-@font-face {
-    src :url(fonts/MADE Canvas Regular.ttf);
-    font-family : 'made canvas';
-    font-style : normal;
-}
-
-@font-face {
-    src :url(fonts/ink-free.ttf);
-    font-family : 'ink free';
-    font-style : normal;
-}
-
-@font-face {
-    src :url(../fonts/Felixti.ttf);
-    font-family : 'felix titling';
-/*    font-style : normal;*/
-}
 
 ::-moz-selection {
     background: #000;
