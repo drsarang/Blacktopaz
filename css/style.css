@@ -1,12 +1,16 @@
+@font-face {
+   font-family: mylato;
+   src: url(fonts/Lato-Regular.ttf);
+}
+
+
+
 /* Base */
 html {
     overflow-x: hidden;
 }
 
-@font-face {
-   font-family: mylato;
-   src: url(fonts/Lato-Regular.ttf);
-}
+
 
 
 body {
