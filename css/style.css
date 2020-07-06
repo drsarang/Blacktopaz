@@ -1,7 +1,28 @@
 @font-face {
-   font-family: mylato;
-   src: url(fonts/lato.ttf);
+   font-family: lato;
+   src: url(../fonts/lato.ttf);
 }
+
+@font-face {
+   font-family: canvas;
+   src: url(../fonts/canvas.ttf);
+}
+
+@font-face {
+   font-family: felix;
+   src: url(../fonts/felix.ttf);
+}
+
+@font-face {
+   font-family: inkfree;
+   src: url(../fonts/inkfree.ttf);
+}
+
+
+
+
+
+
 
 
 
@@ -16,16 +37,10 @@ html {
 body {
     line-height: 1.7;
     color: gray;
-    font-family: mylato;
+    font-family: lato;
     font-weight: 400;
     font-size: 1rem;
 }
-
-@font-face {
-    font-family: 'Proxima';
-    src: url(../fonts/ProximaNova-Regular.otf);
-}
-
 
 ::-moz-selection {
     background: #000;
@@ -50,7 +65,7 @@ body {
 
 
 .btlogo {
-    font-family: made canvas !important;
+    font-family: canvas !important;
     font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 2px;
@@ -119,12 +134,12 @@ body {
 }
 
 .subtext {
-    font-family: ink free;
+    font-family: inkfree;
     font-weight: bolder;
 }
 
 .subtext-lg {
-    font-family: ink free;
+    font-family: inkfree;
     font-weight: bolder;
     font-size: 1.3em;
 }
@@ -135,22 +150,22 @@ body {
 }
 
 .seek-title {
-    font-family: felix titling;
+    font-family: felix;
     font-size: 4em;
 }
 
 .seek-sm-title {
-    font-family: felix titling;
+    font-family: felix;
     font-size: 2em;
 }
 .seek-xsm-title {
-    font-family: felix titling;
+    font-family: felix;
     font-size: 1em;
 }
 
 
 .seek-md-title {
-    font-family: felix titling;
+    font-family: felix;
     font-size: 3em;
 }
 
