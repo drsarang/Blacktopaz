@@ -3,6 +3,7 @@ html {
     overflow-x: hidden;
 }
 
+
 body {
     line-height: 1.7;
     color: gray;
@@ -11,28 +12,35 @@ body {
     font-size: 1rem;
 }
 
-@font-face{
-    font-family : 'lato';
+@font-face {
+    font-family: 'Proxima';
+    src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+
+
+@font-face {
     src :url(fonts/Lato-Regular.ttf);
+    font-family : 'lato';
     font-style : normal;
 }
 
-@font-face{
-    font-family : 'made canvas';
+@font-face {
     src :url(fonts/MADE Canvas Regular.ttf);
+    font-family : 'made canvas';
     font-style : normal;
 }
 
-@font-face{
-    font-family : 'ink free';
+@font-face {
     src :url(fonts/ink-free.ttf);
+    font-family : 'ink free';
     font-style : normal;
 }
 
-@font-face{
+@font-face {
+    src :url(../fonts/Felixti.ttf);
     font-family : 'felix titling';
-    src :url(fonts/Felixti.ttf);
-    font-style : normal;
+/*    font-style : normal;*/
 }
 
 ::-moz-selection {
