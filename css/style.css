@@ -19,6 +19,12 @@
 }
 
 
+@font-face {
+   font-family: carolissa;
+   src: url(../fonts/Carolissa.ttf);
+}
+
+
 
 
 
@@ -1065,15 +1071,8 @@ body:after {
     /*    -------------WELCOME TEXT LANDING PAGE ------------*/
 
     text-transform: capitalize !important;
-    /*          font-family: darkline;*/
-    /*          font-family: dark roast;*/
-    font-family: Carolissa;
-    /*          font-family: Broadcast Matter;*/
-    /*          font-family:Rushtick Regural;*/
-    /*    font-weight: 400;*/
+    font-family: carolissa;
     color: #F39200;
-    /*    color: #fff;*/
-    /*    font-weight: 900; */
 }
 
 @media (max-width: 991.98px) {
